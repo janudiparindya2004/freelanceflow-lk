@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Inter', Arial, sans-serif;
+  color: #172033;
+  background: #f6f8fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button, a {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 30px 20px;
+  background: #ffffff;
+  border-right: 1px solid #e8edf5;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  font-size: 20px;
+  letter-spacing: -0.7px;
+  margin: 0 0 42px;
+  color: #172033;
+}
+
+.brand span {
+  color: #6755e8;
+}
+
+.menu-label {
+  color: #99a2b3;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 0 0 14px 12px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #697386;
+  padding: 13px 12px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  background: #f4f2ff;
+  color: #6755e8;
+}
+
+.nav-link.active {
+  background: #efedff;
+  color: #6755e8;
+  font-weight: 700;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #edf0f5;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #6755e8;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.sidebar-bottom strong,
+.sidebar-bottom small {
+  display: block;
+}
+
+.sidebar-bottom strong {
+  font-size: 12px;
+}
+
+.sidebar-bottom small {
+  margin-top: 5px;
+  color: #929bad;
+  font-size: 10px;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 38px 42px 20px;
+  max-width: 1700px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.welcome {
+  color: #7564e9;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  margin: 0 0 10px;
+}
+
+.topbar h1 {
+  font-size: 29px;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  color: #8a93a5;
+  font-size: 13px;
+  margin: 9px 0 0;
+}
+
+.primary-btn {
+  background: #6755e8;
+  border: none;
+  color: #ffffff;
+  padding: 13px 18px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 12px #6755e826;
+}
+
+.primary-btn:hover {
+  background: #5442d4;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.summary-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #edf0f6;
+  border-radius: 13px;
+  padding: 22px 18px;
+  min-height: 155px;
+  box-shadow: 0 3px 12px #27334d05;
+}
+
+.summary-card > p {
+  color: #7e8799;
+  font-size: 12px;
+  margin: 0 0 18px;
+}
+
+.summary-card h2 {
+  font-size: 23px;
+  letter-spacing: -0.7px;
+  margin: 0 0 10px;
+}
+
+.card-note {
+  color: #9ba3b2;
+  font-size: 10px;
+}
+
+.card-icon {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.income {
+  background: #e6f8ef;
+  color: #18a568;
+}
+
+.expense {
+  background: #fff0ed;
+  color: #e66b54;
+}
+
+.profit {
+  background: #efedff;
+  color: #6755e8;
+}
+
+.pending {
+  background: #fff5df;
+  color: #d99a23;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 20px;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #edf0f6;
+  border-radius: 13px;
+  padding: 24px;
+  min-width: 0;
+}
+
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.panel-heading h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.panel-heading p {
+  color: #9ba3b2;
+  font-size: 11px;
+  margin: 8px 0 0;
+}
+
+.panel-heading a {
+  color: #6755e8;
+  font-size: 11px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 45px 10px 35px;
+}
+
+.empty-icon {
+  margin: 0 auto 15px;
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  background: #f1efff;
+  color: #6755e8;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+}
+
+.empty-state h4 {
+  margin: 0 0 9px;
+  font-size: 13px;
+}
+
+.empty-state p {
+  color: #9ba3b2;
+  font-size: 11px;
+  margin: 0;
+}
+
+.project-stats {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.project-stats div {
+  display: flex;
+  align-items: center;
+  color: #697386;
+  font-size: 12px;
+}
+
+.project-stats strong {
+  margin-left: auto;
+  color: #172033;
+  font-size: 14px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.blue {
+  background: #6c63e9;
+}
+
+.green {
+  background: #22b77a;
+}
+
+.orange {
+  background: #f0ae42;
+}
+
+.project-message {
+  margin-top: 25px;
+  padding: 14px;
+  background: #f8f7ff;
+  border-radius: 8px;
+  color: #8b83c9;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+footer {
+  margin-top: 32px;
+  color: #a0a7b5;
+  font-size: 10px;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .main-content {
+    padding: 30px 24px;
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .brand {
+    margin-bottom: 20px;
+  }
+
+  .sidebar-bottom {
+    display: none;
+  }
+
+  .sidebar nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 25px 16px;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .topbar h1 {
+    font-size: 25px;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+}
